@@ -3,19 +3,23 @@ import Logo from "./Logo.astro";
 ---
 
 <header
-	class='h-12 fixed w-screen py-4 z-10 backdrop-blur-sm top-0 px-8 lg:px-0'>
+	class='h-12 fixed w-screen py-2 z-10 backdrop-blur-md bg-indigo-900 top-50 px-8 lg:px-0'>
 	<div class='grid grid-cols-3 max-w-7xl mx-auto items-center justify-between'>
-		<a href='/'><Logo class='w-14' /> </a>
-		<nav class='col-span-1 justify-self-center'>
+		<a href='/'><Logo class='w-10' /> </a>
+		<nav class='justify-self-center'>
 			<ul class='flex gap-4'>
 				<li>INFO</li>
 				<li>ARCHIVO</li>
 				<li>FINALISTAS</li>
 			</ul>
 		</nav>
-		<a
-			href='#'
-			class='border rounded-full inline-block border-white px-4 py-2 justify-self-end hover:bg-white hover:text-black duration-300'
-		>ENTRA EN LA ISLA ESLAND</a>
+		<span
+			class='group flex max-w-80 justify-self-end h-auto justify-center items-center border border-solid rounded-[29px] z-10 border-white cursor-pointer px-4 py-2 hover:shadow-custom-white hover:[text-shadow:_1px_1px_20px_#fff]'>
+			<a
+				href='#'
+				class='color-white text-decoration-none transition ease-in-out group-hover:font-[400]'>
+				ENTRA EN LA ISLA ESLAND</a
+			>
+		</span>
 	</div>
 </header>
