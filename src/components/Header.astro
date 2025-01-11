@@ -1,10 +1,11 @@
 ---
 import Logo from "./Logo.astro";
+import Button from "./Button.tsx";
 ---
 
 <header
-	class='h-12 fixed w-screen py-2 z-10 backdrop-blur-md  top-50 px-8 lg:px-0'>
-	<div class='grid grid-cols-3 max-w-7xl mx-auto items-center justify-between'>
+	class='h-16 fixed w-screen py-2 z-10 backdrop-blur-md top-50 px-8 lg:px-0'>
+	<div class='grid grid-cols-3 max-w-7xl mx-auto items-center'>
 		<a href='/'><Logo class='w-10' /> </a>
 		<nav class='justify-self-center'>
 			<ul class='flex gap-4'>
@@ -13,13 +14,11 @@ import Logo from "./Logo.astro";
 				<li>FINALISTAS</li>
 			</ul>
 		</nav>
-		<span
-			class='group flex max-w-80 justify-self-end h-auto justify-center items-center border border-solid rounded-[29px] z-10 border-white cursor-pointer px-4 py-2 hover:shadow-custom-white hover:[text-shadow:_1px_1px_20px_#fff]'>
-			<a
-				href='#'
-				class='color-white text-decoration-none transition ease-in-out group-hover:font-[400]'>
-				ENTRA EN LA ISLA ESLAND</a
-			>
-		</span>
+		<Button
+			className='md:py-2 md:ml-auto md:text-base lg:text-base'
+			url='https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view'
+			>ENTRA EN LA ISLA ESLAND</Button
+		>
+		
 	</div>
 </header>
