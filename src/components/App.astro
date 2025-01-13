@@ -6,13 +6,17 @@ import Bento from "../components/Bento.astro";
 import PreFooter from "../components/PreFooter.astro";
 import Footer from "../components/Footer.astro";
 
+import { getI18N } from "@/i18n";
+const {currentLocale} = Astro
+const i18n = getI18N({ currentLocale });
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `as1sets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
-	title='Premios Esland - lo mejor del streaming y creadores de contenido'
-	description='Descubre a los mejores creadores de contenido de España y Latinoamérica. ¡Vota por tus favoritos!lo mejor del streaming y creadores de contenido'>
+	title={i18n.SEO_TITLE_1 + ' ' + i18n.SEO_TITLE_2}
+	description={i18n.SEO_DESCRIPTION}>
 	<Video />
 	<main>
 		<Intro />
