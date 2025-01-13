@@ -7,7 +7,7 @@ import PreFooter from "../components/PreFooter.astro";
 import Footer from "../components/Footer.astro";
 
 import { getI18N } from "@/i18n";
-const {currentLocale} = Astro
+const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -15,7 +15,7 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <Layout
-	title={i18n.SEO_TITLE_1 + ' ' + i18n.SEO_TITLE_2}
+	title=`${i18n.SEO_TITLE_1} ${new Date().getFullYear()} ${i18n.SEO_TITLE_2}`
 	description={i18n.SEO_DESCRIPTION}>
 	<Video />
 	<main>
